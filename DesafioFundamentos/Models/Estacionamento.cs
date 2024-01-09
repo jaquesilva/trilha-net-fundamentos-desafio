@@ -2,10 +2,16 @@ namespace DesafioFundamentos.Models
 {
     public class Estacionamento
     {
-        private decimal precoInicial = 0;
-        private decimal precoPorHora = 0;
-        private List<string> veiculos = new List<string>();
+        private decimal precoInicial = 0; /* declara e inicializa uma variável PRIVATE do tipo decimal, 
+        iniciando com o valor 0. O modificador "private" indica que essa variável só é acessível dentra da classe */
+        private decimal precoPorHora = 0; /* declara e inicializa uma variável PRIVATE do tipo decimal, 
+        iniciando com o valor 0. O modificador "private" indica que essa variável só é acessível dentra da classe */
+        private List<string> veiculos = new List<string>(); /* declara e inicializa uma lista chamada veículos, 
+        A lista é do tipo 'List<string>', significa que conterá elementos do tipo 'string'. A lista é 
+        inicializada como uma nova instância de 'List<string>(), é uma variável PRIVATE. O modificador "private" 
+        indica que essa variável só é acessível dentra da classe */
 
+        // Construtor
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
             this.precoInicial = precoInicial;
