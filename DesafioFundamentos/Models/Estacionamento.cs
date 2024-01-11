@@ -22,9 +22,13 @@ namespace DesafioFundamentos.Models
         {
             // TODO: Pedir para o usuário digitar uma placa (ReadLine) e adicionar na lista "veiculos"
             Console.WriteLine("Digite a placa do veículo para estacionar:");
-            string placa = Console.ReadLine(); // valor armazenado como string
+            string placa = Console.ReadLine(); /* valor armazenado como string, nesse caso, não tem a necessidade 
+            de realizar a conversão */
+        
 
-            veiculos.Add(placa);
+            veiculos.Add(placa); /* veículos é uma lista, declarada e inicializada na linha 9, as listas, tem métodos específicos
+            como o "Add", que nesse caso, será responsável por pegar o dado digitado pelo usuário, que foi solicitado na linha 25, 
+            e armazenado na variável "placa" e adicionar na lista "veiculos"*/
 
         }
 
@@ -39,7 +43,7 @@ namespace DesafioFundamentos.Models
             string placa = Console.ReadLine();
 
             // Verifica se o veículo existe
-            if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
+            if (veiculos.Any(x => x.ToUpper() == placa.ToUpper())) // C# Case sensitive
             {
                 // TODO: Pedir para o usuário digitar a quantidade de horas que o veículo permaneceu estacionado,
                 // TODO: Realizar o seguinte cálculo: "precoInicial + precoPorHora * horas" para a variável valorTotal                
@@ -51,6 +55,8 @@ namespace DesafioFundamentos.Models
                 decimal valorTotal = 0; 
 
                 valorTotal = precoInicial + (precoPorHora * horas);
+
+                //AQUI EU POSSO IMPLEMENTAR O MÉTODO DE PAGAMENTO
 
                 // TODO: Remover a placa digitada da lista de veículos
                 // *IMPLEMENTE AQUI*
@@ -66,10 +72,11 @@ namespace DesafioFundamentos.Models
             }
         }
 
-        public void ListarVeiculos()
+        public void ListarVeiculos() //ACREDITO QUE ESSA FUNCIONALIDADE SERIA MAIS INTERESSANTE PARA A GESTÃO DO ESTACIONAMENTO
+        // POR EXEMPLO: DEU PROBLEMA NA CÂMERA DE SEGURANÇA, 
         {
             // Verifica se há veículos no estacionamento
-            if (veiculos.Any())
+            if (veiculos.Any()) // ENTENDER O QUE É ESSE ANY
             {
                 
                 // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
