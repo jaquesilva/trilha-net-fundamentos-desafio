@@ -29,7 +29,8 @@ while (exibirMenu)
     Console.WriteLine("1 - Cadastrar veículo");
     Console.WriteLine("2 - Remover veículo");
     Console.WriteLine("3 - Listar veículos");
-    Console.WriteLine("4 - Encerrar");
+    Console.WriteLine("4 - Realizar pagamento");
+    Console.WriteLine("5 - Encerrar");
 
     switch (Console.ReadLine()) 
     {
@@ -44,8 +45,13 @@ while (exibirMenu)
         case "3":
             es.ListarVeiculos(); 
             break; 
+        
+        // "case" desenvolvido com o apoio da minha colega de bootcamp Adriany Correa
+        case "4":
+            es.RealizarPagamento(); 
+            break; 
 
-        case "4": 
+        case "5": 
             exibirMenu = false; 
             break;
 

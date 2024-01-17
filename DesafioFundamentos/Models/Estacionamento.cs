@@ -71,5 +71,47 @@ namespace DesafioFundamentos.Models
                 Console.WriteLine("Não há veículos estacionados.");
             }
         }
+
+        // Método desenvolvido com o apoio da minha colega de bootcamp Adriany Correa
+        public void RealizarPagamento()
+        {
+            bool exibirMenu = true;
+
+            while (exibirMenu)
+            {
+                Console.Clear(); 
+                Console.WriteLine("Digite a sua opção:");
+                Console.WriteLine("1 - Cartão de crédito");
+                Console.WriteLine("2 - Dinheiro");
+                Console.WriteLine("3 - Pix");
+                Console.WriteLine("4 - Encerrar");
+
+                switch (Console.ReadLine()) 
+                {
+                    case "1": 
+                        Console.WriteLine("Método de pagamento ainda não disponível, favor escolher a opção '3 - Pix'"); 
+                        break; 
+
+                    case "2": 
+                        Console.WriteLine("Método de pagamento ainda não disponível, favor escolher a opção '3 - Pix'"); 
+                        break; 
+
+                    case "3":
+                        Console.WriteLine("Pagamento realizado com sucesso"); 
+                        break; 
+
+                    case "4": 
+                        exibirMenu = false; 
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida"); 
+                        break; 
+                }
+
+                Console.WriteLine("Pressione uma tecla para continuar"); 
+                Console.ReadLine();
+            }   
+        }
     }
 }
