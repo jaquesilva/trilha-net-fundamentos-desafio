@@ -18,8 +18,6 @@ precoPorHora = Convert.ToDecimal(Console.ReadLine());
 // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
 Estacionamento es = new Estacionamento(precoInicial, precoPorHora);
 
-/* NÃO ENTENDI QUAL A FUNÇÃO DESSA LINHA a princípio, depois resolvi comentá-la e executar o código novamente, funcionou normalmente,
-então acredito que essa linha não tem utilidade no código*/
 // string opcao = string.Empty; 
 bool exibirMenu = true;
 
